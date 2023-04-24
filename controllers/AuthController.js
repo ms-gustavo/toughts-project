@@ -1,6 +1,8 @@
 const { request } = require("express");
 const User = require("../models/User");
 const bcrypt = require("bcryptjs");
+const isEmail = require("isemail");
+const dns = require("dns");
 
 module.exports = class AuthController {
   static login(req, res) {
@@ -14,7 +16,14 @@ module.exports = class AuthController {
   static async registerPost(req, res) {
     const { name, email, password, confirmpassword } = req.body;
 
-    // password validation
+    // email validation
+    if (!isEmail.validate(email)) {
+      req.flash("message", "O e-mail não é válido!");
+      res.render("auth/register");
+
+      return;
+    }
+
     if (password !== confirmpassword) {
       req.flash("message", "As senhas não conferem. Tente novamente!");
       res.render("auth/register");
@@ -23,7 +32,7 @@ module.exports = class AuthController {
     }
 
     // check if user exists
-    const checkIfUserExists = await User.findOne({ where: { email: email } });
+    const checkIfUserExists = await User.findOne({ where: { email } });
 
     if (checkIfUserExists) {
       req.flash("message", "O e-mail já está em uso!");
@@ -67,7 +76,7 @@ module.exports = class AuthController {
     const { email, password } = req.body;
 
     // check if user exists
-    const checkIfUserExists = await User.findOne({ where: { email: email } });
+    const checkIfUserExists = await User.findOne({ where: { email } });
 
     if (!checkIfUserExists) {
       req.flash("message", "Usuário não encontrado!");
