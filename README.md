@@ -57,7 +57,7 @@ DB_NAME=nome-do-banco-de-dados
 
 <h2>Contribuição</h2>
 
-<p>Contribuições são bem-vindas! Para sugestões e correções, abra uma <a href="https://github.com/seu-usuario/toughts/issues">issue</a> ou envie um <a href="https://github.com/seu-usuario/toughts/pulls">pull request</a>.</p>
+<p>Contribuições são bem-vindas! Para sugestões e correções, abra uma <a href="https://github.com/ms-gustavo/toughts-project/issues">issue</a> ou envie um <a href="https://github.com/ms-gustavo/toughts-project/pulls">pull request</a>.</p>
 
 <h2>Dependências</h2>
 
@@ -66,32 +66,70 @@ DB_NAME=nome-do-banco-de-dados
 <table>
   <thead>
     <tr>
-      <th>Nome</th>
-      <th>Versão</th>
+      <th>Dependency</th>
+      <th>Version</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>bcryptjs</td>
-      <td>^2.4.3</td>
+      <td><code>^2.4.3</code></td>
     </tr>
     <tr>
       <td>connect-flash</td>
-      <td>^0.1.1</td>
+      <td><code>^0.1.1</code></td>
     </tr>
     <tr>
       <td>cookie-parser</td>
-      <td>^1.4.6</td>
+      <td><code>^1.4.6</code></td>
     </tr>
     <tr>
       <td>cookie-session</td>
-      <td>^2.0.0</td>
+      <td><code>^2.0.0</code></td>
     </tr>
     <tr>
       <td>dns</td>
-      <td>^0.2.2</td>
+      <td><code>^0.2.2</code></td>
     </tr>
     <tr>
       <td>dotenv</td>
-      <td>^16.0.3</td>
+      <td><code>^16.0.3</code></td>
     </tr>
+    <tr>
+      <td>express</td>
+      <td><code>^4.18.2</code></td>
+    </tr>
+    <tr>
+      <td>express-flash</td>
+      <td><code>^0.0.2</code></td>
+    </tr>
+    <tr>
+      <td>express-handlebars</td>
+      <td><code>^7.0.6</code></td>
+    </tr>
+    <tr>
+      <td>express-session</td>
+      <td><code>^1.17.3</code></td>
+    </tr>
+    <tr>
+      <td>isemail</td>
+      <td><code>^3.2.0</code></td>
+    </tr>
+    <tr>
+      <td>mysql2</td>
+      <td><code>^3.2.0</code></td>
+    </tr>
+    <tr>
+      <td>nodemon</td>
+      <td><code>^2.0.22</code></td>
+    </tr>
+    <tr>
+      <td>sequelize</td>
+      <td><code>^6.31.0</code></td>
+    </tr>
+    <tr>
+      <td>session-file-store</td>
+      <td><code>^1.5.0</code></td>
+    </tr>
+  </tbody>
+</table>
